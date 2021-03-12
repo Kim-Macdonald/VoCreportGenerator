@@ -98,6 +98,8 @@ VoC Requests:
 
 <b>Run mergeQCresults_plusMissing.py on the server, as per mergeQCresults_plusMissing.py instructions</b> (https://github.com/Kim-Macdonald/mergeQCresults_plusMissing )
 
+(replace [MiSeqRunID] with your MiSeqRunID/RunName or Directory for the sequencing run of interest):
+
       cd sequence/analysis/run/directory/[MiSeqRunID]; conda activate pandas; python3 path/to/mergeQCresults_plusMissing.py; conda deactivate
 
 
