@@ -108,7 +108,7 @@ VoC Requests:
 
 (replace [MiSeqRunID] with your MiSeqRunID/RunName that appears in the file created above):
 
-      awk -v d="RunID" 'BEGIN{FS=OFS=","} {print $0, (NR>1?d:"RunNum")}' <i>[MiSeqRunID]</i>_MissingPlus_QC_lineage_VoC_OrderedFinal.csv > <i>[MiSeqRunID]</i>_MissingPlus_QC_lineage_VoC_OrderedFinal_RunNum.csv
+      awk -v d="RunID" 'BEGIN{FS=OFS=","} {print $0, (NR>1?d:"RunNum")}' [MiSeqRunID]_MissingPlus_QC_lineage_VoC_OrderedFinal.csv > [MiSeqRunID]_MissingPlus_QC_lineage_VoC_OrderedFinal_RunNum.csv
 
 Example: 
 
