@@ -117,7 +117,7 @@ Example:
       awk -v d="0003" 'BEGIN{FS=OFS=","} {print $0, (NR>1?d:"RunNum")}' 210304_M01234_0215_000000000-G6D8F_MissingPlus_QC_lineage_VoC_OrderedFinal.csv > 210304_M01234_0215_000000000-G6D8F_MissingPlus_QC_lineage_VoC_OrderedFinal_RunNum.csv
 
 
-Output from running (Example): 
+Output looks like (from viewing with column command) (Example command): 
 
       column -ts ',' 210304_M01234_0215_000000000-G6D8F_MissingPlus_QC_lineage_VoC_OrderedFinal_RunNum.csv | less -S
 
