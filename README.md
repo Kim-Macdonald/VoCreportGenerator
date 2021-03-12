@@ -55,7 +55,7 @@ VoC Requests are pulled from a separate sheet, that you supply. Update the link 
 
 It's assumed that this Requests file has 3 columns (sampleID, Run#, FastqID). 
 
-It's also assumed that you'll enter requests for 1 run at a time (if not you can copy the code for the sort and groupby RunNum down here as well, or choose the alternative save method (commented out above the other in the script, near the end of the script) which will just save by today's date instead of by Run#) (to choose the other method, add a # in front of the 2nd save method (at end of script) to comment it out, and remove the # in front of the first method). 
+It's also assumed that you'll enter requests for 1 run at a time (if not you can copy the code for the sort and groupby RunNum down here as well, or choose the alternative save method (commented out in the 2nd last line of the script) which will just save by today's date instead of by Run#) (to choose the other method, add a # in front of the save method (at end of script - last line) to comment it out, and remove the # in front of the 2nd last line). 
 
 
 You'll populate this sheet with the list of samples (sampleID, Run#, FastqID - adjust script as needed to change these) that have VoC WGS testing requests. The script will create a table of these samples and their VoC results assigned (yes/no/possible/failed and type: UK (B.1.1.7) etc, Not a VoC, Possible [VoC from ncov watchlist ID], WGS QC Fail). 
