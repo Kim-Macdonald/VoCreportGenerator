@@ -115,7 +115,7 @@ for i, j in df_VoCposs1.groupby('RunNum'):
     
 #-----------------VARIANT REQUESTS-------------------    
 # Read in VARIANT REQUESTS Sheet (Sheet1):
-df_VariantReq = pd.read_excel('Path/To/SheetWithVariantRequests/VARIANTS_CovidWGS_DailySamples.xlsx', sheet_name=0)   # Reads in the first sheet (0) of the excel file
+df_VariantReq = pd.read_excel('Path/To/SheetWithVariantRequests/VariantRequests.xlsx', sheet_name=0)   # Reads in the first sheet (0) of the excel file
 #print(df_VariantReq)  #correct
 
 # Match Requests to VoC Results (Neg,Failed only - pos are in above table - I'm pulling them all for now though) (left join):   
