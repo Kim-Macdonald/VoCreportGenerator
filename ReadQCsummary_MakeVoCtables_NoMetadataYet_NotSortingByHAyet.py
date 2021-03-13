@@ -21,7 +21,7 @@ df_QCsummary = pd.read_excel('Path/ToMergedFile/CombinedQCsummary.xlsx', sheet_n
 
 #-------------VARIANT POSITIVES---------
 # Keep only rows with VoC Positives:
-# Make variable to store values for positives (lineages of concern):
+# Make variable to store values for positives (lineages of concern) (Can add to this list when more lineages added to VoC list. The variable will then update in the rest of the code, except you'll also need to add to conditions2 and choices2 under Variant Requests section):
 Positive_values = ['B.1.1.7', 'B.1.351', 'P.1', 'B.1.525']
 df_VoCpos0 = df_QCsummary.loc[df_QCsummary['lineage_x'].isin(Positive_values)]
 #print(df_VoCpos0)  #correct (# rows of VoCs expected and obtained) Test with your data
