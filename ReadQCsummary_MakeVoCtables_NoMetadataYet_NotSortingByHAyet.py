@@ -131,7 +131,9 @@ df_VariantReqMatch0.insert(2, "VariantType", "")
 conditions = [
     (df_VariantReqMatch0['lineage_x'].isin(Positive_values)),
     (df_VariantReqMatch0['lineage_x'].eq('none')) & (df_VariantReqMatch0['num_observed_mutations'] > 4),
-    (df_VariantReqMatch0['lineage_x'].eq('none')) & (df_VariantReqMatch0['pct_covered_bases'] < 85.00),
+    #(df_VariantReqMatch0['lineage_x'].eq('none')) & (df_VariantReqMatch0['pct_covered_bases'] < 85.00),
+    #updated to capture anything with blank values (removed from pipeline b/c not enough data) as Failed as well (otherwise are erroneously assigned as Not a Voc)
+    (df_VariantReqMatch0['lineage_x'].eq('none')) & (df_VariantReqMatch0['pct_covered_bases'] < 85.00) | (pd.isnull(df_VariantReqMatch0['lineage_x'])) & (pd.isnull(df_VariantReqMatch0['pct_covered_bases'])),
     (df_VariantReqMatch0['lineage_x'] != 'none')
 ]
 
@@ -174,5 +176,5 @@ RunNum6 = RunNum5.iloc[:, -1].to_string(index=False)
 
 
 # Save output to file:
-#df_VariantReqMatch1.to_csv('Path/To/Output/Files/Requests/' + Today + '_' + 'VoCrequests.csv')    # Alternate file save if you don't want Run#/ID used, and Today's date instead
+#df_VariantReqMatch1.to_csv('Path/To/Output/Files/Requests/' + Today + '_' + 'VoCrequests.csv')    # Alternate file save if you don't want Run#/ID used (if you have multiple runs in the request sheet), and Today's date instead
 df_VariantReqMatch1.to_csv('Path/To/Output/Files/Requests/' + 'Run' + RunNum6.strip() + '_' + 'VoCrequests.csv')
