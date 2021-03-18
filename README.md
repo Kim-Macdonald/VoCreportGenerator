@@ -160,7 +160,7 @@ Remove the header rows from all the files except the first: (replace both instan
 <b>Create a spreadsheet (.xlsx) called "VariantRequests.xlsx"  (this is where you'll copy in samples that have been requested for VoC detection/confirmation by WGS). It should have 3 columns (sample, Run#, FastqID). The sampleID used in the sample column, should match that which will appear in your WGS QC results (Runs_CombinedQCSummary.csv)
       
       
-<b>Open the csv file (e.g. Runs1-145_combined_QC_lineage_VoC_OrderedFinal.csv) and save as .xlsx.</b>
+<b>Open the csv file (e.g. Runs_CombinedQCsummary.csv) and save as .xlsx.</b>
 (or you can edit the script to read it in as a csv (pd.read_csv) instead of xlsx (pd.read_excel))
 
 
