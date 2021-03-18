@@ -191,9 +191,9 @@ You can merge multiple files in windows using <b>windows cmd prompt</b> (copy th
 
 <b>Remove the extra header lines for each of the runs, that were appended, in that file:</b>
 
-(first command pull the header row out of the combined file from above and stores in a file)
+(first command pulls the header row out of the combined file from above and stores in a file)
 
-(2nd command removes all the header lines from teh above combined file, and creates a new file, with no header. Then it combines the 2 files (copy command) into a new file "Runs_CombinedQCSummary.csv". Then it removes the 2 Temp files. 
+(2nd command removes all the header lines from the above combined file, and creates a new file, with no header. Then it combines the 2 files (copy command) into a new file "Runs_CombinedQCSummary.csv". Then it removes the 2 Temp files. 
 
 
       set /p headerrow=< Runs1-145_combined_QC_lineage_VoC_OrderedFinal.csv && >Temp1.csv echo %headerrow% 
