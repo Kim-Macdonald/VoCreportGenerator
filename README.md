@@ -5,7 +5,6 @@ Generates VoC reports (positives by run#, possible by run#, and variant requests
 # Assumptions: 
 
 We use the following pipelines to produce results used below: 
-
 BCCDC-PHL/ncov2019-artic-nf (forked from connor-lab/ncov2019-artic-nf) and BCCDC-PHL/ncov-tools (forked from jts/ncov-tools)
 
 
