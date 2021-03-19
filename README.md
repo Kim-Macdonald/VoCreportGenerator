@@ -5,7 +5,7 @@ Generates VoC reports (positives by run#, possible by run#, and variant requests
 # Assumptions: 
 
 We use the following pipelines to produce results used below: 
-BCCDC-PHL/ncov2019-artic-nf (forked from connor-lab/ncov2019-artic-nf) and BCCDC-PHL/ncov-tools (forked from jts/ncov-tools)
+ BCCDC-PHL/ncov2019-artic-nf (forked from connor-lab/ncov2019-artic-nf) and BCCDC-PHL/ncov-tools (forked from jts/ncov-tools)
 
 
 You should have the following folders set up on your network/PC (or change the paths in script to reflect where you want your VoC tables/reports saved):
