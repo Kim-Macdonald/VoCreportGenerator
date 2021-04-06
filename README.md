@@ -34,7 +34,7 @@ You can merge multiple files in windows using windows cmd prompt (copy them all 
 
 ## Positive VoC tables: 
 
-Based on the combined/merged results file, the script will pull <b>all positive VoC lineages</b> (UK (B.1.1.7), SA (B.1.351), Brazil (P.1), and Nigerian (B.1.525) at the moment) into a new table for positive VoCs. It'll then separate this table by run#/ID (if you added the column at the end), and save individual tables per run, in the Positives folder you created above (at the path you specified in the script). 
+Based on the combined/merged results file, the script will pull <b>all positive VoC lineages</b> and any VoIs for your site (UK (B.1.1.7), SA (B.1.351), Brazil (P.1), and Nigerian (B.1.525) at the moment) into a new table for positive VoCs. It'll then separate this table by run#/ID (if you added the column at the end), and save individual tables per run, in the Positives folder you created above (at the path you specified in the script). 
 
 
 Output filenames will look like:
@@ -196,9 +196,9 @@ You can merge multiple files in windows using <b>windows cmd prompt</b> (copy th
 
 <b>Remove the extra header lines for each of the runs, that were appended, in that file:</b>
 
-(first command pulls the header row out of the combined file from above and stores in a file)
+(first command pulls the header row out of the combined file from above and stores in a file (Temp1.csv))
 
-(2nd command removes all the header lines from the above combined file, and creates a new file, with no header. Then it combines the 2 files (copy command) into a new file "Runs_CombinedQCSummary.csv". Then it removes the 2 Temp files. 
+(2nd command removes all the header lines from the above combined file, and creates a new file, with no header (Temp2.csv). Then it combines the 2 files (copy command) into a new file "Runs_CombinedQCSummary.csv". Then it removes the 2 Temp files. 
 
 
       set /p headerrow=< Runs1-145_combined_QC_lineage_VoC_OrderedFinal.csv && >Temp1.csv echo %headerrow% 
