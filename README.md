@@ -153,7 +153,7 @@ Navigate to the analysis directory (1 level above your run directories - e.g. if
 
 Remove the header rows from all the files except the first: (replace both instances of "Runs1-145" below with whatever you used in your output file above)
 
-      header=$(head -n 1 Runs1-145_combined_QC_lineage_VoC_OrderedFinal.csv); (printf "%s\n" "$header"; grep -vFxe "$header" Runs1-145_combined_QC_lineage_VoC_OrderedFinal.csv) > Runs_CombinedQCsummary.csv
+      sed '2,${/LibraryNum/d;}' Runs1-145_combined_QC_lineage_VoC_OrderedFinal_PlusVoCcalls.csv > Runs_CombinedQCsummary.csv
 
 
 <b>Transfer the Runs_CombinedQCsummary.csv output file for each run from the server to your PC (e.g. via Cyberduck, FileZilla, etc).</b>
